@@ -5,7 +5,7 @@ using namespace std;
 
 double mapping(double number){
 
-    number = number*3/4 - 2;
+    number = number*3/4. - 7./4.;
     return number;
 
 }
@@ -23,14 +23,15 @@ int main()
         while(!ifs.eof()){
 
             ifs >> data;
-
-            mapping(data);
+            cout << data << " ";
+            double result = mapping(data);
+            cout<< result << " ";
             if (counter-1){
-                mean = (mean*(counter - 1) + data)/counter;
+                mean = (mean*(counter - 1) + result)/counter;
 
             }
             else {
-                mean = data;
+                mean = result;
             }
             cout << mean << " " << counter << "\n";
 
